@@ -1,0 +1,57 @@
+{
+  "name": "storylio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portofolio digital modern untuk menampilkan proyek dan pengalaman.",
+  "author": "demonicheinz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/demonicheinz/Storylio.git"
+  },
+  "homepage": "https://heinz.id",
+  "bugs": {
+    "url": "https://github.com/demonicheinz/Storylio/issues"
+  },
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "next": "15.1.7",
+    "next-themes": "^0.4.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.20",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@biomejs/biome"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+      "biome check --write --no-errors-on-unmatched"
+    ]
+  }
+}
