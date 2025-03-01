@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Sora, JetBrains_Mono } from "next/font/google";
 import "../styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -11,13 +11,23 @@ const sora = Sora({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-sora",
+  display: "swap",
+  preload: true,
 });
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-jetbrains-mono",
+  display: "swap",
+  preload: true,
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "Storylio",
@@ -39,10 +49,14 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
-          enableSystem={false}
+          enableSystem
           disableTransitionOnChange
         >
-          <main className="relative flex flex-col min-h-screen">{children}</main>
+          <ClientWrapper>
+            <FloatingNav navItems={navItems} />
+            <main className="relative flex flex-col min-h-screen">{children}</main>
+            <Footer />
+          </ClientWrapper>
         </ThemeProvider>
       </body>
     </html>

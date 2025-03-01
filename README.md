@@ -38,31 +38,31 @@ Storylio adalah aplikasi portfolio modern yang dibangun menggunakan Next.js 15 d
 
 ## Features
 
-- **Landing Page**: Hero section, daftar proyek & artikel terbaru.
-- **Halaman Dinamis**: About, Work, Blog, Gallery (Masonry).
-- **Admin Panel**: CRUD proyek & blog.
-- **Dark/Light Mode**: Tema responsif.
-- **SEO Friendly**: Meta tags dinamis.
+-   **Landing Page**: Hero section, daftar proyek & artikel terbaru.
+-   **Halaman Dinamis**: About, Work, Blog, Gallery (Masonry).
+-   **Admin Panel**: CRUD proyek & blog.
+-   **Dark/Light Mode**: Tema responsif.
+-   **SEO Friendly**: Meta tags dinamis.
 
 ## Tech Stack
 
-- **Framework: Next.js 15
-- **Bahasa Pemrograman**: TypeScript
-- **Database**: Supabase (PostgreSQL)
-- **Styling**: CSS Modules / Tailwind CSS (opsional)
-- **State Management**: React Context + Custom Hooks
-- **Tools**: Biome, Husky (untuk pre-commit hooks)
+-   **Framework**: Next.js 15
+-   **Bahasa Pemrograman**: TypeScript
+-   **Database**: Supabase (PostgreSQL)
+-   **Styling**: CSS Modules / Tailwind CSS (opsional)
+-   **State Management**: React Context + Custom Hooks
+-   **Tools**: Biome, Husky (untuk pre-commit hooks)
 
 ## Getting Started
 
 **Prerequisites**
 
-| Software / Layanan  | Keterangan |
-|---------------------|------------|
-| **Node.js** | Wajib versi **18+** |
-| **npm / yarn / pnpm / bun** | Salah satu package manager harus terinstal |
-| **Akun Supabase**  | Diperlukan jika menggunakan **Supabase** sebagai backend |
-| **Git** | Pastikan Git terinstal |
+| Software / Layanan          | Keterangan                                               |
+| --------------------------- | -------------------------------------------------------- |
+| **Node.js**                 | Wajib versi **18+**                                      |
+| **npm / yarn / pnpm / bun** | Salah satu package manager harus terinstal               |
+| **Akun Supabase**           | Diperlukan jika menggunakan **Supabase** sebagai backend |
+| **Git**                     | Pastikan Git terinstal                                   |
 
 1.  **Clone Repositori**
     ```bash
@@ -97,6 +97,7 @@ Storylio adalah aplikasi portfolio modern yang dibangun menggunakan Next.js 15 d
 ## Contribution
 
 Kami sangat terbuka untuk kontribusi! Jika kamu ingin berkontribusi, silakan ikuti langkah-langkah berikut:
+
 1. Fork repositori ini.
 2. Buat branch baru untuk fitur atau perbaikan bug:
     ```bash
@@ -120,4 +121,4 @@ Proyek ini dilisensikan di bawah lisensi MIT - lihat file LICENSE untuk detail l
 
 Made with ❤️ by [Heinz](https://github.com/demonicheinz)
 
-Terima kasih telah melihat proyek ini! Happy coding! 
+Terima kasih telah melihat proyek ini! Happy coding!

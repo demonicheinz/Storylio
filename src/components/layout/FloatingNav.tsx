@@ -1,11 +1,11 @@
-"use client"; // Ini adalah Client Component
+"use client";
 
 import React, { useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
-import * as Icons from "react-icons/fa6";
+import * as Icons from "react-icons/lu";
 import type { NavItem } from "@/types/navItem";
 
 export const FloatingNav = ({
@@ -68,22 +68,15 @@ export const FloatingNav = ({
                   "relative flex items-center space-x-1 transition-all duration-200 rounded-lg",
                   "px-2 py-2 md:px-4 md:py-2",
                   isActive
-                    ? "bg-white/15 text-white"
+                    ? "border-b-2 border-white/50 bg-white/15 text-white"
                     : "text-neutral-300 hover:bg-white/10 hover:text-white",
                 )}
               >
                 <Icon
-                  size={15}
+                  size={20}
                   className="md:mr-1.5"
                 />
                 <span className="hidden md:inline text-sm font-medium">{navItem.name}</span>
-                {isActive && (
-                  <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/70 mx-1"
-                    layoutId="navbar-indicator"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  />
-                )}
               </Link>
             );
           })}
