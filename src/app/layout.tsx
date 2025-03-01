@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Sora, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "../styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import ClientWrapper from "@/components/layout/ClientWrapper";
@@ -7,20 +7,48 @@ import { navItems } from "@/data/navItems";
 import { FloatingNav } from "@/components/layout/FloatingNav";
 import Footer from "@/components/layout/Footer";
 
-const sora = Sora({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
+const sora = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Sora-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Sora-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Sora-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
   variable: "--font-sora",
   display: "swap",
-  preload: true,
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-jetbrains-mono",
+const jetbrainsMono = localFont({
+  src: [
+    {
+      path: "../../public/fonts/JetBrainsMono-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/JetBrainsMono-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/JetBrainsMono-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-jetbrains",
   display: "swap",
-  preload: true,
 });
 
 export const viewport: Viewport = {
@@ -42,13 +70,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="antialiased overflow-x-hidden"
+      className="${sora.variable} ${jetbrainsMono.variable} antialiased overflow-x-hidden"
       suppressHydrationWarning
     >
-      <body className={`${sora.variable} ${jetbrainsMono.variable} bg-black-100 overflow-x-hidden`}>
+      <body
+        suppressHydrationWarning={true}
+        className="bg-black-100"
+      >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
